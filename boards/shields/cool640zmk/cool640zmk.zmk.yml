@@ -1,0 +1,8 @@
+file_format: "1"
+id: cool640zmk
+name: cool640zmk
+type: shield
+url: https://github.com/telzo2000/zmk-config-cool640zmk
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
