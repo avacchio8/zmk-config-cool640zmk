@@ -14,8 +14,10 @@
 
 &mt {
     flavor = "balanced";
-    quick-tap-ms = <0>;
+    quick-tap-ms = <300>;
 };
+
+&lt { quick-tap-ms = <300>; };
 
 / {
     combos {
@@ -65,6 +67,39 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
+        };
+
+        space4: space4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp SPACE &kp SPACE &kp SPACE>;
+            label = "SPACE4";
+        };
+
+        right4: right4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT>;
+            label = "RIGHT4";
+        };
+
+        left4: left4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
+            label = "LEFT4";
+        };
+
+        dispSW: dispSW {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHIFT &kp LWIN &kp B>,
+                <&macro_release>,
+                <&kp LCTRL &kp LSHIFT &kp LWIN &kp B>;
+
+            label = "DISPSW";
         };
     };
 
